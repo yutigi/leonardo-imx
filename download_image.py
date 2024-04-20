@@ -1,6 +1,5 @@
 import requests
 
-
 api_key = "ca8ac37f-8790-4e1b-8ef6-639b93b56b9a"
 authorization = "Bearer %s" % api_key
 
@@ -12,6 +11,7 @@ headers = {
     "accept": "application/json",
     "authorization": authorization
 }
+
 # get image url
 response = requests.get(url, headers=headers)
 
@@ -25,11 +25,11 @@ print("downloading image")
 
 # download image
 data = requests.get(image_url,headers=headers).content 
-  
+
 # Opening a new file named img with extension .jpg 
 # This file would store the data of the image file 
 f = open('image/img.jpg','wb') 
-  
+
 # Storing the image data inside the data variable to the file 
 f.write(data) 
 f.close() 
