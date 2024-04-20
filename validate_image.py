@@ -33,5 +33,5 @@ def IsValidImage(generationId):
 
 
 if __name__ == '__main__':
-    IsValidImage(sys.argv[1:])
+    IsValidImage(sys.argv)
     pass
